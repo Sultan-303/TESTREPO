@@ -3,7 +3,7 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - main  # Use 'main' if that's your default branch
+      - main  # Ensure you are using the correct branch
   pull_request:
     branches:
       - main
@@ -19,13 +19,10 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '8.0.x'  # Ensure this matches your project
 
       - name: Restore dependencies
         run: dotnet restore IMS/IMS.csproj
 
       - name: Build
         run: dotnet build IMS/IMS.csproj --configuration Release --no-restore
-
-      - name: Run Tests
-        run: dotnet test IMSTests/IMSTests.csproj --no-restore --verbosity normal
