@@ -42,10 +42,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Test.cs",
@@ -55,8 +51,7 @@
               "RelativeToolTip": "IMSTests\\Test.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T16:48:28.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T16:48:28.03Z"
             }
           ]
         }

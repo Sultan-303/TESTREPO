@@ -5,7 +5,7 @@ namespace IMSTests
         [Fact]
         public void AlwaysPasses()
         {
-            Assert.True(true); // This test will always pass
+            Assert.True(false); // This test will always pass
         }
     }
 }
