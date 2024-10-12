@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,19 +55,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "IMS.API\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Models\\Product.cs",
+              "RelativeToolTip": "IMS.API\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T17:52:51.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Program.cs",
               "RelativeDocumentMoniker": "IMS.API\\Program.cs",
               "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Program.cs",
               "RelativeToolTip": "IMS.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T17:46:25.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "IMS.API\\Controllers\\ProductsController.cs",
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IMS.API.http",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\IMS.API.http",
               "RelativeDocumentMoniker": "IMS.API\\IMS.API.http",
@@ -89,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "IMS.API\\WeatherForecast.cs",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IMSTests.csproj",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\IMSTests.csproj",
               "RelativeDocumentMoniker": "IMSTests\\IMSTests.csproj",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ci.yml",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\.github\\workflows\\ci.yml",
               "RelativeDocumentMoniker": ".github\\workflows\\ci.yml",
@@ -126,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Test.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\Test.cs",
               "RelativeDocumentMoniker": "IMSTests\\Test.cs",
