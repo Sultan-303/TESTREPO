@@ -22,10 +22,10 @@ jobs:
           dotnet-version: '8.0.x'  # Ensure this matches your project
 
       - name: Restore dependencies
-        run: dotnet restore IMS/IMS.csproj
+        run: dotnet restore IMS.sln  # Restore the solution instead of the deleted IMS project
 
       - name: Build
-        run: dotnet build IMS/IMS.csproj --configuration Release --no-restore
+        run: dotnet build IMS.sln --configuration Release --no-restore  # Build the solution
 
   test:
     runs-on: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
           dotnet-version: '8.0.x'  # Ensure this matches your project
 
       - name: Restore dependencies
-        run: dotnet restore IMSTests/IMSTests.csproj
+        run: dotnet restore IMSTests/IMSTests.csproj  # Restore the test project
 
       - name: Run Tests
-        run: dotnet test IMSTests/IMSTests.csproj --no-restore --verbosity normal
+        run: dotnet test IMSTests/IMSTests.csproj --no-restore --verbosity normal  # Run tests
