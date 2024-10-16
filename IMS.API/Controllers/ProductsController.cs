@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using IMS.Interfaces;
+using IMS.DAL.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IMS.API.Controllers
 {
@@ -7,27 +8,77 @@ namespace IMS.API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        // Temporary in-memory list of products (later you can connect this to your database)
-        private static List<Product> products = new List<Product>
+        private readonly IProductService _productService;
+
+        // Constructor injection of the ProductService
+        public ProductsController(IProductService productService)
         {
-            new Product { Id = 1, Name = "Laptop", Price = 1200.99M },
-            new Product { Id = 2, Name = "Phone", Price = 799.99M },
-            new Product { Id = 3, Name = "Tablet", Price = 450.00M }
-        };
+            _productService = productService;
+        }
 
         // GET: api/products
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> GetProducts()
+        public IActionResult GetAllProducts()
         {
+            var products = _productService.GetAllProducts();
             return Ok(products);
         }
-    }
 
-    // A simple model class representing a product
-    public class Product
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        // GET: api/products/{id}
+        [HttpGet("{id}")]
+        public IActionResult GetProductById(int id)
+        {
+            var product = _productService.GetProductById(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return Ok(product);
+        }
+
+        // POST: api/products
+        [HttpPost]
+        public IActionResult AddProduct([FromBody] Product product)
+        {
+            if (product == null)
+            {
+                return BadRequest();
+            }
+            _productService.AddProduct(product);
+            return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
+        }
+
+        // PUT: api/products/{id}
+        [HttpPut("{id}")]
+        public IActionResult UpdateProduct(int id, [FromBody] Product product)
+        {
+            if (product == null || product.Id != id)
+            {
+                return BadRequest();
+            }
+
+            var existingProduct = _productService.GetProductById(id);
+            if (existingProduct == null)
+            {
+                return NotFound();
+            }
+
+            _productService.UpdateProduct(product);
+            return NoContent();
+        }
+
+        // DELETE: api/products/{id}
+        [HttpDelete("{id}")]
+        public IActionResult DeleteProduct(int id)
+        {
+            var product = _productService.GetProductById(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            _productService.DeleteProduct(id);
+            return NoContent();
+        }
     }
 }
