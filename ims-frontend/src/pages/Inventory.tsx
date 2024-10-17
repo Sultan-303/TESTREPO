@@ -4,27 +4,21 @@ import { Product } from '../types';
 import './Inventory.css';
 
 const Inventory: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [allItems, setAllItems] = useState<Product[]>([]);
+  const [nearExpiryItems, setNearExpiryItems] = useState<Product[]>([]);
   const [view, setView] = useState<'all' | 'near-expiry'>('all');
 
   useEffect(() => {
     // Fetch data from the JSON file
     fetch('/inventory.json')
       .then(response => response.json())
-      .then(data => setProducts(data));
+      .then(data => {
+        setAllItems(data.allItems);
+        setNearExpiryItems(data.nearExpiryItems);
+      });
   }, []);
 
-  const getNearExpiryProducts = () => {
-    const today = new Date();
-    return products.filter(product => {
-      const expiryDate = new Date(product.ExpiryDate);
-      const timeDiff = expiryDate.getTime() - today.getTime();
-      const daysDiff = timeDiff / (1000 * 3600 * 24);
-      return daysDiff <= 30; // Items expiring within the next 30 days
-    });
-  };
-
-  const displayedProducts = view === 'all' ? products : getNearExpiryProducts();
+  const displayedProducts = view === 'all' ? allItems : nearExpiryItems;
 
   return (
     <div>

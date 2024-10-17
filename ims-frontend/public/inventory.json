@@ -1,4 +1,5 @@
-[
+{
+  "allItems": [
     {
       "ProductID": 1,
       "ProductName": "Cheese",
@@ -53,4 +54,25 @@
       "ExpiryDate": "2023-10-10",
       "Categories": ["Dairy"]
     }
+  ],
+  "nearExpiryItems": [
+    {
+      "ProductID": 5,
+      "ProductName": "Butter",
+      "Description": "A pack of butter",
+      "QuantityInStock": 25,
+      "Price": 3.49,
+      "ExpiryDate": "2023-09-30",
+      "Categories": ["Dairy"]
+    },
+    {
+      "ProductID": 6,
+      "ProductName": "Eggs",
+      "Description": "A dozen eggs",
+      "QuantityInStock": 60,
+      "Price": 2.49,
+      "ExpiryDate": "2023-10-10",
+      "Categories": ["Dairy"]
+    }
   ]
+}
