@@ -2,21 +2,42 @@
 import React, { useState, useEffect } from 'react';
 import { Product } from '../types';
 import './Inventory.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Inventory: React.FC = () => {
   const [allItems, setAllItems] = useState<Product[]>([]);
   const [nearExpiryItems, setNearExpiryItems] = useState<Product[]>([]);
   const [view, setView] = useState<'all' | 'near-expiry'>('all');
+  const [visibleFields, setVisibleFields] = useState({
+    name: true,
+    stock: true,
+    price: true,
+  });
 
   useEffect(() => {
-    // Fetch data from the JSON file
+    fetchInventoryData();
+  }, []);
+
+  const fetchInventoryData = () => {
     fetch('/inventory.json')
       .then(response => response.json())
       .then(data => {
         setAllItems(data.allItems);
         setNearExpiryItems(data.nearExpiryItems);
       });
-  }, []);
+  };
+
+  const handleDelete = (productId: number) => {
+    fetch(`YOUR_API_ENDPOINT_HERE/${productId}`, { method: 'DELETE' })
+      .then(response => {
+        if (response.ok) {
+          fetchInventoryData();
+        } else {
+          console.error('Failed to delete item');
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  };
 
   const displayedProducts = view === 'all' ? allItems : nearExpiryItems;
 
@@ -36,18 +57,53 @@ const Inventory: React.FC = () => {
         >
           Near Expiry
         </span>
+        <div className="view-toggle">
+          <span>View:</span>
+          <label>
+            <input
+              type="checkbox"
+              checked={visibleFields.name}
+              onChange={() => setVisibleFields({ ...visibleFields, name: !visibleFields.name })}
+            />
+            Name
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={visibleFields.stock}
+              onChange={() => setVisibleFields({ ...visibleFields, stock: !visibleFields.stock })}
+            />
+            Stock
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={visibleFields.price}
+              onChange={() => setVisibleFields({ ...visibleFields, price: !visibleFields.price })}
+            />
+            Price
+          </label>
+        </div>
+      </div>
+      <div className="product-header">
+        {visibleFields.name && <span>Product Name</span>}
+        {visibleFields.stock && <span>Stock</span>}
+        {visibleFields.price && <span>Price</span>}
       </div>
       <div>
-        {displayedProducts.map(product => (
-          <div key={product.ProductID} className="product-card">
-            <h2>{product.ProductName}</h2>
-            <p>{product.Description}</p>
-            <p>Quantity: {product.QuantityInStock}</p>
-            <p>Price: ${product.Price.toFixed(2)}</p>
-            <p>Expiry Date: {product.ExpiryDate}</p>
-            <p>Categories: {product.Categories.join(', ')}</p>
-          </div>
-        ))}
+        {displayedProducts.length === 0 ? (
+          <p>There are no products to be viewed.</p>
+        ) : (
+          displayedProducts.map(product => (
+            <div key={product.ProductID} className="product-card">
+              <i className="fas fa-pencil-alt edit-icon"></i>
+              <i className="fas fa-trash delete-icon" onClick={() => handleDelete(product.ProductID)}></i>
+              {visibleFields.name && <span>{product.ProductName}</span>}
+              {visibleFields.stock && <span>{product.QuantityInStock}</span>}
+              {visibleFields.price && <span>${product.Price.toFixed(2)}</span>}
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
