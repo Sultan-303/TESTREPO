@@ -1,6 +1,5 @@
-﻿using IMS.DAL.Entities;
+using IMS.DTO;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace IMS.DAL
 {
@@ -8,8 +7,16 @@ namespace IMS.DAL
     {
         public IMSContext(DbContextOptions<IMSContext> options) : base(options) { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Item> Items { get; set; }
 
-        // Additional DbSets for other entities
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Specify precision and scale for the Price property
+            modelBuilder.Entity<Item>()
+                .Property(i => i.Price)
+                .HasColumnType("decimal(18,2)");
+        }
     }
 }

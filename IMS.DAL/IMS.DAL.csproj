@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IMS.DTO\IMS.DTO.csproj" />
     <ProjectReference Include="..\IMS.Interfaces\IMS.Interfaces.csproj" />
   </ItemGroup>
 

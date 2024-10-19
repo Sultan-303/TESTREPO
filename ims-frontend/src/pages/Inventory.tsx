@@ -57,38 +57,40 @@ const Inventory: React.FC = () => {
         >
           Near Expiry
         </span>
-        <div className="view-toggle">
-          <span>View:</span>
-          <label>
-            <input
-              type="checkbox"
-              checked={visibleFields.name}
-              onChange={() => setVisibleFields({ ...visibleFields, name: !visibleFields.name })}
-            />
-            Name
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={visibleFields.stock}
-              onChange={() => setVisibleFields({ ...visibleFields, stock: !visibleFields.stock })}
-            />
-            Stock
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={visibleFields.price}
-              onChange={() => setVisibleFields({ ...visibleFields, price: !visibleFields.price })}
-            />
-            Price
-          </label>
-        </div>
       </div>
-      <div className="product-header">
-        {visibleFields.name && <span>Product Name</span>}
-        {visibleFields.stock && <span>Stock</span>}
-        {visibleFields.price && <span>Price</span>}
+      <div className="view-toggle">
+        <span>View:</span>
+        <label>
+          <input
+            type="checkbox"
+            checked={visibleFields.name}
+            onChange={() => setVisibleFields({ ...visibleFields, name: !visibleFields.name })}
+          />
+          Name
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={visibleFields.stock}
+            onChange={() => setVisibleFields({ ...visibleFields, stock: !visibleFields.stock })}
+          />
+          Stock
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={visibleFields.price}
+            onChange={() => setVisibleFields({ ...visibleFields, price: !visibleFields.price })}
+          />
+          Price
+        </label>
+      </div>
+      <div className="product-header-box">
+        <div className="product-header">
+          {visibleFields.name && <span>Product</span>}
+          {visibleFields.stock && <span>Stock</span>}
+          {visibleFields.price && <span>Price</span>}
+        </div>
       </div>
       <div>
         {displayedProducts.length === 0 ? (
@@ -96,11 +98,15 @@ const Inventory: React.FC = () => {
         ) : (
           displayedProducts.map(product => (
             <div key={product.ProductID} className="product-card">
-              <i className="fas fa-pencil-alt edit-icon"></i>
-              <i className="fas fa-trash delete-icon" onClick={() => handleDelete(product.ProductID)}></i>
-              {visibleFields.name && <span>{product.ProductName}</span>}
-              {visibleFields.stock && <span>{product.QuantityInStock}</span>}
-              {visibleFields.price && <span>${product.Price.toFixed(2)}</span>}
+              <div className="icons">
+                <i className="fas fa-pencil-alt edit-icon"></i>
+                <i className="fas fa-trash delete-icon" onClick={() => handleDelete(product.ProductID)}></i>
+              </div>
+              <div className="product-details">
+                {visibleFields.name && <span className="product-name">{product.ProductName}</span>}
+                {visibleFields.stock && <span className="product-stock">{product.QuantityInStock}</span>}
+                {visibleFields.price && <span className="product-price">${product.Price.toFixed(2)}</span>}
+              </div>
             </div>
           ))
         )}

@@ -1,9 +1,8 @@
 using IMS.DAL;
 using IMS.DAL.Repositories;
 using IMS.BLL.Services;
-using IMS.Interfaces.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using IMS.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,13 +25,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IProductService, ProductService>(); // BLL
-builder.Services.AddScoped<IProductRepository, ProductRepository>(); // DAL
+builder.Services.AddScoped<IItemService, ItemService>(); // BLL
+builder.Services.AddScoped<IItemRepository, ItemRepository>(); // DAL
 
 // Add the DbContext
 builder.Services.AddDbContext<IMSContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 
 var app = builder.Build();
 
@@ -44,7 +42,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowReactApp");
-
 
 app.UseHttpsRedirection();
 

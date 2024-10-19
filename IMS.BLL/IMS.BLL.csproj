@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IMS.DAL\IMS.DAL.csproj" />
+    <ProjectReference Include="..\IMS.DTO\IMS.DTO.csproj" />
     <ProjectReference Include="..\IMS.Interfaces\IMS.Interfaces.csproj" />
   </ItemGroup>
 
