@@ -1,36 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241019092444_UpdateItemPricePrecision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMS.DAL\\Migrations\\20241019092444_UpdateItemPricePrecision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\imscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\imscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241019083934_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMS.DAL\\Migrations\\20241019083934_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915494FD-8F81-41CF-8976-B056CBB57DAD}|IMS.BLL\\IMS.BLL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.bll\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915494FD-8F81-41CF-8976-B056CBB57DAD}|IMS.BLL\\IMS.BLL.csproj|solutionrelative:ims.bll\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A04EA31-3A17-4884-9599-79BA7CCE9CCA}|IMS.Interfaces\\IMS.Interfaces.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A04EA31-3A17-4884-9599-79BA7CCE9CCA}|IMS.Interfaces\\IMS.Interfaces.csproj|solutionrelative:ims.interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -38,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,94 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241019092444_UpdateItemPricePrecision.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241019092444_UpdateItemPricePrecision.cs",
-              "RelativeDocumentMoniker": "IMS.DAL\\Migrations\\20241019092444_UpdateItemPricePrecision.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241019092444_UpdateItemPricePrecision.cs",
-              "RelativeToolTip": "IMS.DAL\\Migrations\\20241019092444_UpdateItemPricePrecision.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T09:24:44.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IMSContext.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMSContext.cs",
-              "RelativeDocumentMoniker": "IMS.DAL\\IMSContext.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMSContext.cs",
-              "RelativeToolTip": "IMS.DAL\\IMSContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T09:24:30.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20241019083934_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241019083934_InitialCreate.cs",
-              "RelativeDocumentMoniker": "IMS.DAL\\Migrations\\20241019083934_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241019083934_InitialCreate.cs",
-              "RelativeToolTip": "IMS.DAL\\Migrations\\20241019083934_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T08:39:34.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\ItemsController.cs",
-              "RelativeDocumentMoniker": "IMS.API\\Controllers\\ItemsController.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\ItemsController.cs",
-              "RelativeToolTip": "IMS.API\\Controllers\\ItemsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T08:27:23.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\ItemRepository.cs",
-              "RelativeDocumentMoniker": "IMS.DAL\\Repositories\\ItemRepository.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\ItemRepository.cs",
-              "RelativeToolTip": "IMS.DAL\\Repositories\\ItemRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T08:27:22.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemService.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\Services\\ItemService.cs",
-              "RelativeDocumentMoniker": "IMS.BLL\\Services\\ItemService.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\Services\\ItemService.cs",
-              "RelativeToolTip": "IMS.BLL\\Services\\ItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T08:27:21.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IItemService.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IItemService.cs",
-              "RelativeDocumentMoniker": "IMS.Interfaces\\IItemService.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IItemService.cs",
-              "RelativeToolTip": "IMS.Interfaces\\IItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T08:27:19.721Z"
             }
           ]
         }

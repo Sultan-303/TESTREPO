@@ -1,10 +1,14 @@
-// src/types.ts
-export interface Product {
-    ProductID: number;
-    ProductName: string;
-    Description: string;
-    QuantityInStock: number;
-    Price: number;
-    ExpiryDate: string;
-    Categories: string[];
-  }
+export interface Item {
+  itemID: number;
+  itemName: string;
+  unit: string;
+  price: number;
+}
+
+export interface Stock {
+  stockID: number;
+  itemID: number;
+  quantityInStock: number;
+  arrivalDate: string;
+  expiryDate?: string;
+}

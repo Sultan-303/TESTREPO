@@ -16,7 +16,8 @@ builder.Services.AddCors(options =>
         {
             builder.WithOrigins("http://localhost:3000") // URL of React app
                    .AllowAnyHeader()
-                   .AllowAnyMethod();
+                   .AllowAnyMethod()
+                   .AllowCredentials(); // Ensure credentials are allowed if needed
         });
 });
 
@@ -32,6 +33,10 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddScoped<IItemService, ItemService>(); // BLL
 builder.Services.AddScoped<IItemRepository, ItemRepository>(); // DAL
+
+// Register the StockService and IStockService
+builder.Services.AddScoped<IStockService, StockService>(); // BLL
+builder.Services.AddScoped<IStockRepository, StockRepository>(); // DAL
 
 // Add the DbContext
 builder.Services.AddDbContext<IMSContext>(options =>

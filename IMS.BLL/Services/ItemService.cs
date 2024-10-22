@@ -3,6 +3,7 @@ using IMS.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+// ItemService.cs
 namespace IMS.BLL.Services
 {
     public class ItemService : IItemService
@@ -16,27 +17,27 @@ namespace IMS.BLL.Services
 
         public async Task<IEnumerable<Item>> GetAllItemsAsync()
         {
-            return await _itemRepository.GetAllAsync();
+            return await _itemRepository.GetAllItemsAsync();
         }
 
         public async Task<Item> GetItemByIdAsync(int id)
         {
-            return await _itemRepository.GetByIdAsync(id);
+            return await _itemRepository.GetItemByIdAsync(id);
         }
 
         public async Task AddItemAsync(Item item)
         {
-            await _itemRepository.AddAsync(item);
+            await _itemRepository.AddItemAsync(item);
         }
 
         public async Task UpdateItemAsync(Item item)
         {
-            await _itemRepository.UpdateAsync(item);
+            await _itemRepository.UpdateItemAsync(item);
         }
 
         public async Task DeleteItemAsync(int id)
         {
-            await _itemRepository.DeleteAsync(id);
+            await _itemRepository.DeleteItemAsync(id);
         }
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+// ItemRepository.cs
 namespace IMS.DAL.Repositories
 {
     public class ItemRepository : IItemRepository
@@ -15,31 +16,31 @@ namespace IMS.DAL.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Item>> GetAllAsync()
+        public async Task<IEnumerable<Item>> GetAllItemsAsync()
         {
             return await _context.Items.ToListAsync();
         }
 
-        public async Task<Item> GetByIdAsync(int id)
+        public async Task<Item> GetItemByIdAsync(int id)
         {
             return await _context.Items.FindAsync(id);
         }
 
-        public async Task AddAsync(Item item)
+        public async Task AddItemAsync(Item item)
         {
             await _context.Items.AddAsync(item);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Item item)
+        public async Task UpdateItemAsync(Item item)
         {
             _context.Items.Update(item);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteItemAsync(int id)
         {
-            var item = await GetByIdAsync(id);
+            var item = await GetItemByIdAsync(id);
             if (item != null)
             {
                 _context.Items.Remove(item);
