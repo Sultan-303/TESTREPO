@@ -21,18 +21,18 @@ namespace IMS.DAL
 
             // Configure ArrivalDate and ExpiryDate properties for Stock
             modelBuilder.Entity<Stock>()
-                .Property(s => s.ArrivalDate)
+                .Property(s => s.arrivalDate)
                 .IsRequired();
 
             modelBuilder.Entity<Stock>()
-                .Property(s => s.ExpiryDate)
+                .Property(s => s.expiryDate)
                 .IsRequired(false);
 
             // Configure the relationship between Stock and Item
             modelBuilder.Entity<Stock>()
                 .HasOne(s => s.Item)
                 .WithMany()
-                .HasForeignKey(s => s.ItemID);
+                .HasForeignKey(s => s.itemID);
         }
     }
 }

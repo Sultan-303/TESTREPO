@@ -17,23 +17,29 @@ namespace IMS.DAL.Repositories
 
         public async Task<IEnumerable<Stock>> GetAllStockAsync()
         {
-            return await _context.Stocks.Include(s => s.Item).ToListAsync(); // Updated to use "Stocks"
+            return await _context.Stocks.Include(s => s.Item).ToListAsync();
         }
 
         public async Task<Stock> GetStockByIdAsync(int id)
         {
-            return await _context.Stocks.Include(s => s.Item).FirstOrDefaultAsync(s => s.StockID == id); // Updated to use "Stocks"
+            return await _context.Stocks.Include(s => s.Item).FirstOrDefaultAsync(s => s.stockID == id);
         }
 
         public async Task AddStockAsync(Stock stock)
         {
-            await _context.Stocks.AddAsync(stock); // Updated to use "Stocks"
+            // Ensure the ItemID is not explicitly set
+            if (stock.Item != null)
+            {
+                stock.Item.ItemID = 0;
+            }
+
+            await _context.Stocks.AddAsync(stock);
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateStockAsync(Stock stock)
         {
-            _context.Stocks.Update(stock); // Updated to use "Stocks"
+            _context.Stocks.Update(stock);
             await _context.SaveChangesAsync();
         }
 
@@ -42,7 +48,7 @@ namespace IMS.DAL.Repositories
             var stock = await GetStockByIdAsync(id);
             if (stock != null)
             {
-                _context.Stocks.Remove(stock); // Updated to use "Stocks"
+                _context.Stocks.Remove(stock);
                 await _context.SaveChangesAsync();
             }
         }

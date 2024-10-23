@@ -78,13 +78,39 @@ const Inventory: React.FC = () => {
 
   const handleAddStock = async () => {
     try {
+      const selectedItem = allItems.find(item => item.itemID === newStock.itemID);
+      if (!selectedItem) {
+        console.error('Selected item not found');
+        return;
+      }
+
+      const payload = {
+        stockID: newStock.stockID,
+        itemID: newStock.itemID,
+        quantityInStock: newStock.quantityInStock,
+        arrivalDate: newStock.arrivalDate,
+        expiryDate: newStock.expiryDate,
+        item: selectedItem
+      };
+
+      console.log('Adding stock:', payload); // Log the payload
       const response = await fetch('https://localhost:7237/api/stock', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(newStock),
+        body: JSON.stringify(payload),
       });
+
+      let responseData;
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        responseData = await response.json();
+      } else {
+        responseData = await response.text();
+      }
+
+      console.log('Response:', responseData); // Log the response
       if (response.ok) {
         fetchStock();
         setShowAddStockForm(false);
@@ -96,7 +122,7 @@ const Inventory: React.FC = () => {
           expiryDate: ''
         });
       } else {
-        console.error('Failed to add stock');
+        console.error('Failed to add stock:', response.status, responseData);
       }
     } catch (error) {
       console.error('Error:', error);

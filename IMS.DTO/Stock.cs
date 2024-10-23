@@ -2,11 +2,11 @@
 {
     public class Stock
     {
-        public int StockID { get; set; }
-        public int ItemID { get; set; }
-        public int QuantityInStock { get; set; }
-        public DateTime ArrivalDate { get; set; }
-        public DateTime? ExpiryDate { get; set; } // Nullable
+        public int stockID { get; set; }
+        public int itemID { get; set; }
+        public int quantityInStock { get; set; }
+        public DateTime arrivalDate { get; set; }
+        public DateTime? expiryDate { get; set; } // Nullable
 
         // Navigation property
         public Item Item { get; set; }
