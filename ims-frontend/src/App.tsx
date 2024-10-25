@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
@@ -6,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import Inventory from './pages/Inventory';
 import Transactions from './pages/Transactions';
+import Items from './pages/Items';
 import './Styles.css';
 
 const App: React.FC = () => {
@@ -18,9 +18,10 @@ const App: React.FC = () => {
           <div className="main-content">
             <div className="content">
               <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/inventory" element={<Inventory />} />
                 <Route path="/transactions" element={<Transactions />} />
-                <Route path="/" element={<Home />} />
+                <Route path="/items" element={<Items />} /> {/* Added route for Items page */}
               </Routes>
             </div>
           </div>

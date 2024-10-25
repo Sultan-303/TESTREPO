@@ -6,6 +6,9 @@
   --view-option-hover-color: #333;
   --text-color-light: black;
   --text-color-dark: white;
+  --button-bg-color: #6200ea;
+  --button-text-color: white;
+  --button-hover-bg-color: #3700b3;
 }
 
 body {
@@ -32,100 +35,31 @@ body {
   display: grid;
   grid-template-columns: 250px 150px 200px; /* Adjusted widths for each column */
   align-items: center;
-  width: 100%; /* Ensure it takes the full width of the header box */
-  padding-left: 150px; /* Increase left padding to move text to the right */
-  font-weight: bold;
-  color: var(--text-color-dark); /* Default to dark mode text color */
 }
 
-.product-card {
+.inventory-container {
+  padding: 20px;
+}
+
+.button-container {
   display: flex;
-  align-items: center;
-  background-color: var(--product-card-background-color);
-  padding: 10px;
-  margin: 0 auto; /* Remove top and bottom margin to connect with other boxes */
-  border-radius: 0; /* No rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 69px; /* Height for item boxes */
-  max-width: 780px; /* Smaller width */
-}
-
-.icons {
-  display: flex;
-  gap: 20px; /* Space between icons */
-  margin-left: 60px; /* Space from the left side of the box */
-}
-
-.product-details {
-  display: grid;
-  grid-template-columns: 250px 150px 200px; /* Adjusted widths for each column */
-  align-items: center;
-  margin-left: 50px; /* Space between icons and product details */
-}
-
-.edit-icon, .delete-icon {
-  cursor: pointer;
-}
-
-.edit-icon {
-  color: #4caf50;
-}
-
-.delete-icon {
-  color: #f44336;
-}
-
-.view-selector {
-  display: flex;
-  gap: 20px; /* Space between view options */
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
 
-.view-option {
-  cursor: pointer;
+.add-item-button,
+.add-stock-button {
   padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  margin-left: 10px;
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
-.view-option.selected {
-  background-color: var(--view-option-selected-color);
-  color: white;
-}
-
-.view-option:hover {
-  background-color: var(--view-option-hover-color);
-}
-
-.view-toggle {
-  display: flex;
-  gap: 10px;
-  margin-left: auto; /* Align to the right */
-  margin-right: 60px; /* Align with the right side of the item boxes */
-  margin-bottom: 20px;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-  --background-color: #333;
-  --text-color-dark: white;
-  --product-header-color: #495D69;
-  --product-card-background-color: #444;
-}
-
-body.dark-mode .product-header {
-  color: var(--text-color-dark); /* Change text color to white in dark mode */
-}
-
-body.light-mode {
-  --background-color: #ffffff;
-  --text-color-dark: black;
-  --product-header-color: #E7EFF3;
-  --product-card-background-color: white;
-}
-
-body.light-mode .product-header {
-  color: var(--text-color-dark); /* Change text color to black in light mode */
+.add-item-button:hover,
+.add-stock-button:hover {
+  background-color: var(--button-hover-bg-color);
 }

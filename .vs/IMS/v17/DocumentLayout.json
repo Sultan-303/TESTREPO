@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "IMS.DAL\\Repositories\\StockRepository.cs",
               "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\StockRepository.cs",
               "RelativeToolTip": "IMS.DAL\\Repositories\\StockRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBgAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T10:15:39.345Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "IMS.API\\Controllers\\StockController.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAnwFQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T10:15:31.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T10:15:31.261Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "IMS.DAL\\IMSContext.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAnwCAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T10:15:18.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T10:15:18.511Z"
             }
           ]
         }

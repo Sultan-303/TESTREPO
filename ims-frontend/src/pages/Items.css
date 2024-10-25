@@ -1,0 +1,31 @@
+/* src/pages/Items.css */
+.items-container {
+    padding: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .add-item-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .add-item-button:hover {
+    background-color: var(--button-hover-bg-color);
+  }
+  
+  .items-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }

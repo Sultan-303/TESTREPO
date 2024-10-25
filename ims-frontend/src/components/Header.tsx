@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="logo">Logo</div>
-      <div className="name">Your Name</div>
+      <div className="name">IMS</div>
       <button onClick={toggleDarkMode} className="dark-mode-toggle">
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
