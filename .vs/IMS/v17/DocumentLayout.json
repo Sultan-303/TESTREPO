@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5648FDA2-C642-4263-BBCA-BAC6D21EE189}|IMSTests\\IMSTests.csproj|c:\\users\\habib\\documents\\github\\testrepo\\imstests\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5648FDA2-C642-4263-BBCA-BAC6D21EE189}|IMSTests\\IMSTests.csproj|solutionrelative:imstests\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5648FDA2-C642-4263-BBCA-BAC6D21EE189}|IMSTests\\IMSTests.csproj|c:\\users\\habib\\documents\\github\\testrepo\\imstests\\services\\itemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5648FDA2-C642-4263-BBCA-BAC6D21EE189}|IMSTests\\IMSTests.csproj|solutionrelative:imstests\\services\\itemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{915494FD-8F81-41CF-8976-B056CBB57DAD}|IMS.BLL\\IMS.BLL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.bll\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915494FD-8F81-41CF-8976-B056CBB57DAD}|IMS.BLL\\IMS.BLL.csproj|solutionrelative:ims.bll\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{915494FD-8F81-41CF-8976-B056CBB57DAD}|IMS.BLL\\IMS.BLL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.bll\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915494FD-8F81-41CF-8976-B056CBB57DAD}|IMS.BLL\\IMS.BLL.csproj|solutionrelative:ims.bll\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\imscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\imscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,31 +67,136 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "IMS.API\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "IMS.API\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:27:10.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Test.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\Test.cs",
+              "RelativeDocumentMoniker": "IMSTests\\Test.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\Test.cs",
+              "RelativeToolTip": "IMSTests\\Test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:01:17.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\Services\\ItemServiceTests.cs",
+              "RelativeDocumentMoniker": "IMSTests\\Services\\ItemServiceTests.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\Services\\ItemServiceTests.cs",
+              "RelativeToolTip": "IMSTests\\Services\\ItemServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:00:43.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\ItemRepository.cs",
+              "RelativeDocumentMoniker": "IMS.DAL\\Repositories\\ItemRepository.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\ItemRepository.cs",
+              "RelativeToolTip": "IMS.DAL\\Repositories\\ItemRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:55:21.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StockService.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\Services\\StockService.cs",
+              "RelativeDocumentMoniker": "IMS.BLL\\Services\\StockService.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\Services\\StockService.cs",
+              "RelativeToolTip": "IMS.BLL\\Services\\StockService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:41:30.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemService.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\Services\\ItemService.cs",
+              "RelativeDocumentMoniker": "IMS.BLL\\Services\\ItemService.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\Services\\ItemService.cs",
+              "RelativeToolTip": "IMS.BLL\\Services\\ItemService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:40:27.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "IMS.API\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "IMS.API\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:26:57.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Program.cs",
+              "RelativeDocumentMoniker": "IMS.API\\Program.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Program.cs",
+              "RelativeToolTip": "IMS.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:28:23.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "StockRepository.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\StockRepository.cs",
               "RelativeDocumentMoniker": "IMS.DAL\\Repositories\\StockRepository.cs",
               "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\StockRepository.cs",
               "RelativeToolTip": "IMS.DAL\\Repositories\\StockRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCQAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T10:15:39.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "StockController.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\StockController.cs",
               "RelativeDocumentMoniker": "IMS.API\\Controllers\\StockController.cs",
               "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\StockController.cs",
               "RelativeToolTip": "IMS.API\\Controllers\\StockController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAnwFQAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAnwCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T10:15:31.261Z"
+              "WhenOpened": "2024-10-23T10:15:31.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "IMSContext.cs",
               "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMSContext.cs",
               "RelativeDocumentMoniker": "IMS.DAL\\IMSContext.cs",
