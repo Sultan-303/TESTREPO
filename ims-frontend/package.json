@@ -56,7 +56,7 @@
       "\\.(css|less|scss|sass)$": "identity-obj-proxy",
       "^@fortawesome/fontawesome-free/css/all.min.css$": "<rootDir>/__mocks__/styleMock.js"
     },
-    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }
