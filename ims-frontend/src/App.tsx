@@ -7,6 +7,7 @@ import Inventory from './pages/Inventory';
 import Transactions from './pages/Transactions';
 import Items from './pages/Items';
 import './Styles.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App: React.FC = () => {
   return (
