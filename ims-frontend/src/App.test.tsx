@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders Home (Dashboard) link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Home \(Dashboard\)/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElements = screen.getAllByText(/Home \(Dashboard\)/i);
+  expect(linkElements[0]).toBeInTheDocument(); // Assert on the first matching element
 });
