@@ -33,12 +33,14 @@ const ItemsContent: React.FC = () => {
     setShowAddItemForm(false);
     setNewItem({ itemID: 0, itemName: '', unit: '', price: 0 });
     await fetchItems(); // Re-fetch items after adding
+    window.location.reload();
   };
 
   // Handler to delete an item
   const handleDeleteItem = async (itemId: number) => {
     await deleteItem(itemId);
     await fetchItems(); // Re-fetch items after deleting
+    window.location.reload();
   };
 
   // Handler to update an item
