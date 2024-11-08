@@ -3,8 +3,11 @@ import { Item } from '../types';
 
 const useItems = () => {
   const [allItems, setAllItems] = useState<Item[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchItems = async () => {
+    setLoading(true);
     try {
       const response = await fetch('https://localhost:7237/api/items');
       if (!response.ok) {
@@ -12,9 +15,12 @@ const useItems = () => {
       }
       const data: Item[] = await response.json();
       setAllItems(data);
-      console.log('Items fetched:', data); // Log fetched items
+      console.log('Items fetched:', data);
     } catch (error) {
+      setError('Error fetching items');
       console.error('Error fetching items:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -33,12 +39,13 @@ const useItems = () => {
       });
 
       if (response.ok) {
-        await fetchItems(); // Re-fetch items after adding
+        await fetchItems();
       } else {
         console.error('Failed to add item');
       }
     } catch (error) {
-      console.error('Error:', error);
+      setError('Error adding item');
+      console.error('Error adding item:', error);
     }
   };
 
@@ -46,12 +53,13 @@ const useItems = () => {
     try {
       const response = await fetch(`https://localhost:7237/api/items/${itemId}`, { method: 'DELETE' });
       if (response.ok) {
-        await fetchItems(); // Re-fetch items after deleting
+        await fetchItems();
       } else {
         console.error('Failed to delete item');
       }
     } catch (error) {
-      console.error('Error:', error);
+      setError('Error deleting item');
+      console.error('Error deleting item:', error);
     }
   };
 
@@ -66,16 +74,17 @@ const useItems = () => {
       });
 
       if (response.ok) {
-        await fetchItems(); // Re-fetch items after updating
+        await fetchItems();
       } else {
         console.error('Failed to update item');
       }
     } catch (error) {
-      console.error('Error:', error);
+      setError('Error updating item');
+      console.error('Error updating item:', error);
     }
   };
 
-  return { allItems, addItem, deleteItem, updateItem, fetchItems };
+  return { allItems, addItem, deleteItem, updateItem, fetchItems, loading, error };
 };
 
 export default useItems;

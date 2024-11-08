@@ -45,7 +45,7 @@ namespace IMS.API.Controllers
                 var stock = await _stockService.GetStockByIdAsync(id);
                 if (stock == null)
                 {
-                    return NotFound();
+                    return NotFound($"Stock with ID {id} not found.");
                 }
                 return Ok(stock);
             }
@@ -74,7 +74,6 @@ namespace IMS.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Error in AddStock: {ex.Message}");
-                _logger.LogError($"Stack Trace: {ex.StackTrace}");
                 return StatusCode(500, "Internal server error");
             }
         }

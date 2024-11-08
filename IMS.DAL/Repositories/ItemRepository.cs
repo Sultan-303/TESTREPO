@@ -1,50 +1,92 @@
 using IMS.DTO;
 using IMS.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-// ItemRepository.cs
 namespace IMS.DAL.Repositories
 {
     public class ItemRepository : IItemRepository
     {
         private readonly IMSContext _context;
+        private readonly ILogger<ItemRepository> _logger;
 
-        public ItemRepository(IMSContext context)
+        public ItemRepository(IMSContext context, ILogger<ItemRepository> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<Item>> GetAllItemsAsync()
         {
-            return await _context.Items.ToListAsync();
+            try
+            {
+                return await _context.Items.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error in GetAllItemsAsync: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task<Item> GetItemByIdAsync(int id)
         {
-            return await _context.Items.FindAsync(id);
+            try
+            {
+                return await _context.Items.FindAsync(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error in GetItemByIdAsync: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task AddItemAsync(Item item)
         {
-            await _context.Items.AddAsync(item);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.Items.AddAsync(item);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error in AddItemAsync: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task UpdateItemAsync(Item item)
         {
-            _context.Items.Update(item);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Items.Update(item);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error in UpdateItemAsync: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task DeleteItemAsync(int id)
         {
-            var item = await GetItemByIdAsync(id);
-            if (item != null)
+            try
             {
-                _context.Items.Remove(item);
-                await _context.SaveChangesAsync();
+                var item = await GetItemByIdAsync(id);
+                if (item != null)
+                {
+                    _context.Items.Remove(item);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error in DeleteItemAsync: {ex.Message}");
+                throw;
             }
         }
     }
