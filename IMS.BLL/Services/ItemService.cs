@@ -3,6 +3,8 @@ using IMS.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
 
 namespace IMS.BLL.Services
 {
@@ -49,23 +51,30 @@ namespace IMS.BLL.Services
         }
 
         public async Task AddItemAsync(Item item)
-        {
-            if (item == null)
-            {
-                _logger.LogWarning("Received null item object");
-                throw new ArgumentNullException(nameof(item), "Item is null.");
-            }
+{
+    if (item == null)
+    {
+        _logger.LogWarning("Received null item object");
+        throw new ArgumentNullException(nameof(item), "Item is null.");
+    }
 
-            try
-            {
-                await _itemRepository.AddItemAsync(item);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error in AddItemAsync: {ex.Message}");
-                throw;
-            }
+    try
+    {
+        // Check if an item with the same name already exists
+        if (await _itemRepository.ItemNameExistsAsync(item.ItemName))
+        {
+            _logger.LogWarning($"Item with name {item.ItemName} already exists.");
+            throw new InvalidOperationException($"Item with name {item.ItemName} already exists.");
         }
+
+        await _itemRepository.AddItemAsync(item);
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError($"Error in AddItemAsync: {ex.Message}");
+        throw;
+    }
+}
 
         public async Task UpdateItemAsync(Item item)
         {

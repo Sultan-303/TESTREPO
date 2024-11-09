@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import Transactions from './pages/Transactions';
+import ItemsPage from './pages/ItemsPage';
 import './Styles.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -19,6 +20,7 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/transactions" element={<Transactions />} />
+                <Route path="/items" element={<ItemsPage />} />
               </Routes>
             </div>
           </div>

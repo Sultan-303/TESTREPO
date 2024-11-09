@@ -11,5 +11,6 @@ namespace IMS.Interfaces
         Task AddItemAsync(Item item);
         Task UpdateItemAsync(Item item);
         Task DeleteItemAsync(int id);
+        Task<bool> ItemNameExistsAsync(string itemName); // Add this line
     }
 }

@@ -58,6 +58,19 @@ namespace IMS.DAL.Repositories
             }
         }
 
+        public async Task<bool> ItemNameExistsAsync(string itemName)
+{
+    try
+    {
+        return await _context.Items.AnyAsync(i => i.ItemName == itemName);
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError($"Error in ItemNameExistsAsync: {ex.Message}");
+        throw;
+    }
+}
+
         public async Task UpdateItemAsync(Item item)
         {
             try

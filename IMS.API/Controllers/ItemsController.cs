@@ -3,7 +3,6 @@ using IMS.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace IMS.API.Controllers
@@ -70,6 +69,11 @@ namespace IMS.API.Controllers
             {
                 _logger.LogWarning($"Validation error in AddItem: {ex.Message}");
                 return BadRequest(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning($"Duplicate item error in AddItem: {ex.Message}");
+                return Conflict(ex.Message); // Return 409 Conflict with the error message
             }
             catch (Exception ex)
             {

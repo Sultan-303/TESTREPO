@@ -5,6 +5,7 @@ const useItems = () => {
   const [allItems, setAllItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
 
   const fetchItems = async () => {
     setLoading(true);
@@ -15,7 +16,6 @@ const useItems = () => {
       }
       const data: Item[] = await response.json();
       setAllItems(data);
-      console.log('Items fetched:', data);
     } catch (error) {
       setError('Error fetching items');
       console.error('Error fetching items:', error);
@@ -39,27 +39,21 @@ const useItems = () => {
       });
 
       if (response.ok) {
-        await fetchItems();
+        const addedItem = await response.json();
+        setAllItems((prevItems) => [...prevItems, addedItem]);
+      } else if (response.status === 409) {
+        // Handle duplicate item name error
+        const errorMessage = await response.text();
+        setError(errorMessage);
+        setShowErrorModal(true);
+        console.error('Error adding item:', errorMessage);
       } else {
-        console.error('Failed to add item');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
       setError('Error adding item');
+      setShowErrorModal(true);
       console.error('Error adding item:', error);
-    }
-  };
-
-  const deleteItem = async (itemId: number) => {
-    try {
-      const response = await fetch(`https://localhost:7237/api/items/${itemId}`, { method: 'DELETE' });
-      if (response.ok) {
-        await fetchItems();
-      } else {
-        console.error('Failed to delete item');
-      }
-    } catch (error) {
-      setError('Error deleting item');
-      console.error('Error deleting item:', error);
     }
   };
 
@@ -74,17 +68,39 @@ const useItems = () => {
       });
 
       if (response.ok) {
-        await fetchItems();
+        const updatedItemData = await response.json();
+        setAllItems((prevItems) =>
+          prevItems.map((item) => (item.itemID === updatedItemData.itemID ? updatedItemData : item))
+        );
       } else {
-        console.error('Failed to update item');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
       setError('Error updating item');
+      setShowErrorModal(true);
       console.error('Error updating item:', error);
     }
   };
 
-  return { allItems, addItem, deleteItem, updateItem, fetchItems, loading, error };
+  const deleteItem = async (itemId: number) => {
+    try {
+      const response = await fetch(`https://localhost:7237/api/items/${itemId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        setAllItems((prevItems) => prevItems.filter((item) => item.itemID !== itemId));
+      } else {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+    } catch (error) {
+      setError('Error deleting item');
+      setShowErrorModal(true);
+      console.error('Error deleting item:', error);
+    }
+  };
+
+  return { allItems, addItem, updateItem, deleteItem, fetchItems, loading, error, showErrorModal, setShowErrorModal };
 };
 
 export default useItems;
