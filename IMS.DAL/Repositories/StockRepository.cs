@@ -22,17 +22,11 @@ namespace IMS.DAL.Repositories
 
         public async Task<Stock> GetStockByIdAsync(int id)
         {
-            return await _context.Stocks.Include(s => s.Item).FirstOrDefaultAsync(s => s.stockID == id);
+            return await _context.Stocks.Include(s => s.Item).FirstOrDefaultAsync(s => s.StockID == id);
         }
 
         public async Task AddStockAsync(Stock stock)
         {
-            // Ensure the ItemID is not explicitly set
-            if (stock.Item != null)
-            {
-                stock.Item.ItemID = 0;
-            }
-
             await _context.Stocks.AddAsync(stock);
             await _context.SaveChangesAsync();
         }

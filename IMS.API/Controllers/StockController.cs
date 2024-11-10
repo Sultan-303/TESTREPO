@@ -59,17 +59,16 @@ namespace IMS.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AddStock([FromBody] Stock stock)
         {
-            if (stock == null)
-            {
-                _logger.LogWarning("Received null stock object");
-                return BadRequest("Stock is null.");
-            }
-
             try
             {
                 _logger.LogInformation("Adding new stock");
                 await _stockService.AddStockAsync(stock);
-                return CreatedAtAction(nameof(GetStockById), new { id = stock.stockID }, stock);
+                return CreatedAtAction(nameof(GetStockById), new { id = stock.StockID }, stock);
+            }
+            catch (ArgumentNullException ex)
+            {
+                _logger.LogWarning($"Validation error in AddStock: {ex.Message}");
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {
@@ -81,14 +80,9 @@ namespace IMS.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStock(int id, [FromBody] Stock stock)
         {
-            if (id != stock.stockID)
+            if (id != stock.StockID)
             {
                 return BadRequest("Stock ID mismatch.");
-            }
-
-            if (stock == null)
-            {
-                return BadRequest("Stock is null.");
             }
 
             try
@@ -96,6 +90,11 @@ namespace IMS.API.Controllers
                 _logger.LogInformation($"Updating stock with ID: {id}");
                 await _stockService.UpdateStockAsync(stock);
                 return NoContent();
+            }
+            catch (ArgumentNullException ex)
+            {
+                _logger.LogWarning($"Validation error in UpdateStock: {ex.Message}");
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {

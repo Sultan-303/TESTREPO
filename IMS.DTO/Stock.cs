@@ -1,14 +1,26 @@
-﻿namespace IMS.DTO
+﻿// Stock.cs
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace IMS.DTO
 {
     public class Stock
     {
-        public int stockID { get; set; }
-        public int itemID { get; set; }
-        public int quantityInStock { get; set; }
-        public DateTime arrivalDate { get; set; }
-        public DateTime? expiryDate { get; set; } // Nullable
+        [Key]
+        public int StockID { get; set; }
 
-        // Navigation property
-        public Item Item { get; set; }
+        [ForeignKey("Item")]
+        public int ItemID { get; set; }
+
+        [Required]
+        public int QuantityInStock { get; set; }
+
+        [Required]
+        public DateTime ArrivalDate { get; set; }
+
+        public DateTime? ExpiryDate { get; set; }
+
+        public Item Item { get; set; } // Navigation property
     }
 }
