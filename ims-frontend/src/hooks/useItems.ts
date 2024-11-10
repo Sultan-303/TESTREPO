@@ -68,10 +68,17 @@ const useItems = () => {
       });
 
       if (response.ok) {
-        const updatedItemData = await response.json();
-        setAllItems((prevItems) =>
-          prevItems.map((item) => (item.itemID === updatedItemData.itemID ? updatedItemData : item))
-        );
+        if (response.status === 204) {
+          // Handle No Content response
+          setAllItems((prevItems) =>
+            prevItems.map((item) => (item.itemID === updatedItem.itemID ? updatedItem : item))
+          );
+        } else {
+          const updatedItemData = await response.json();
+          setAllItems((prevItems) =>
+            prevItems.map((item) => (item.itemID === updatedItemData.itemID ? updatedItemData : item))
+          );
+        }
       } else {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
