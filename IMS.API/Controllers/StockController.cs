@@ -27,6 +27,7 @@ namespace IMS.API.Controllers
             {
                 _logger.LogInformation("Fetching all stock");
                 var stock = await _stockService.GetAllStockAsync();
+                _logger.LogInformation($"Fetched {stock.Count()} stock items");
                 return Ok(stock);
             }
             catch (Exception ex)
@@ -45,8 +46,10 @@ namespace IMS.API.Controllers
                 var stock = await _stockService.GetStockByIdAsync(id);
                 if (stock == null)
                 {
+                    _logger.LogWarning($"Stock with ID {id} not found.");
                     return NotFound($"Stock with ID {id} not found.");
                 }
+                _logger.LogInformation($"Fetched stock with ID: {id}");
                 return Ok(stock);
             }
             catch (Exception ex)
@@ -61,8 +64,9 @@ namespace IMS.API.Controllers
         {
             try
             {
-                _logger.LogInformation("Adding new stock");
+                _logger.LogInformation($"Adding new stock: {stock}");
                 await _stockService.AddStockAsync(stock);
+                _logger.LogInformation($"Added stock with ID: {stock.StockID}");
                 return CreatedAtAction(nameof(GetStockById), new { id = stock.StockID }, stock);
             }
             catch (ArgumentNullException ex)
@@ -82,6 +86,7 @@ namespace IMS.API.Controllers
         {
             if (id != stock.StockID)
             {
+                _logger.LogWarning($"Stock ID mismatch: {id} != {stock.StockID}");
                 return BadRequest("Stock ID mismatch.");
             }
 
@@ -89,6 +94,7 @@ namespace IMS.API.Controllers
             {
                 _logger.LogInformation($"Updating stock with ID: {id}");
                 await _stockService.UpdateStockAsync(stock);
+                _logger.LogInformation($"Updated stock with ID: {id}");
                 return NoContent();
             }
             catch (ArgumentNullException ex)
@@ -110,6 +116,7 @@ namespace IMS.API.Controllers
             {
                 _logger.LogInformation($"Deleting stock with ID: {id}");
                 await _stockService.DeleteStockAsync(id);
+                _logger.LogInformation($"Deleted stock with ID: {id}");
                 return NoContent();
             }
             catch (Exception ex)

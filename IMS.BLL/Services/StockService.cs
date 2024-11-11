@@ -22,7 +22,10 @@ namespace IMS.BLL.Services
         {
             try
             {
-                return await _stockRepository.GetAllStockAsync();
+                _logger.LogInformation("Fetching all stock from repository");
+                var stock = await _stockRepository.GetAllStockAsync();
+                _logger.LogInformation($"Fetched {stock.Count()} stock items from repository");
+                return stock;
             }
             catch (Exception ex)
             {
@@ -35,7 +38,17 @@ namespace IMS.BLL.Services
         {
             try
             {
-                return await _stockRepository.GetStockByIdAsync(id);
+                _logger.LogInformation($"Fetching stock with ID: {id} from repository");
+                var stock = await _stockRepository.GetStockByIdAsync(id);
+                if (stock == null)
+                {
+                    _logger.LogWarning($"Stock with ID {id} not found in repository.");
+                }
+                else
+                {
+                    _logger.LogInformation($"Fetched stock with ID: {id} from repository");
+                }
+                return stock;
             }
             catch (Exception ex)
             {
@@ -54,7 +67,9 @@ namespace IMS.BLL.Services
 
             try
             {
+                _logger.LogInformation($"Adding stock to repository: {stock}");
                 await _stockRepository.AddStockAsync(stock);
+                _logger.LogInformation($"Added stock with ID: {stock.StockID} to repository");
             }
             catch (Exception ex)
             {
@@ -73,7 +88,9 @@ namespace IMS.BLL.Services
 
             try
             {
+                _logger.LogInformation($"Updating stock in repository: {stock}");
                 await _stockRepository.UpdateStockAsync(stock);
+                _logger.LogInformation($"Updated stock with ID: {stock.StockID} in repository");
             }
             catch (Exception ex)
             {
@@ -86,7 +103,9 @@ namespace IMS.BLL.Services
         {
             try
             {
+                _logger.LogInformation($"Deleting stock with ID: {id} from repository");
                 await _stockRepository.DeleteStockAsync(id);
+                _logger.LogInformation($"Deleted stock with ID: {id} from repository");
             }
             catch (Exception ex)
             {
