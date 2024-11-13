@@ -11,6 +11,7 @@ const InventoryPage: React.FC = () => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [currentStock, setCurrentStock] = useState<Stock | null>(null);
+  const [currentItemName, setCurrentItemName] = useState<string>('');
 
   useEffect(() => {
     fetchStock();
@@ -58,7 +59,7 @@ const InventoryPage: React.FC = () => {
                 <span>{stock.quantityInStock}</span>
                 <span>{new Date(stock.arrivalDate).toLocaleDateString()}</span>
                 <span>{stock.expiryDate ? new Date(stock.expiryDate).toLocaleDateString() : 'N/A'}</span>
-                <button onClick={() => { setCurrentStock(stock); setShowEditModal(true); }}>Edit</button>
+                <button onClick={() => { setCurrentStock({ ...stock, arrivalDate: new Date(stock.arrivalDate), expiryDate: stock.expiryDate ? new Date(stock.expiryDate) : undefined }); setCurrentItemName(getItemName(stock.itemID)); setShowEditModal(true); }}>Edit</button>
                 <button onClick={() => handleDeleteStock(stock.stockID)}>Delete</button>
               </li>
             ))}
@@ -69,6 +70,7 @@ const InventoryPage: React.FC = () => {
       {showEditModal && currentStock && (
         <EditStockModal
           stock={currentStock}
+          itemName={currentItemName}
           onClose={() => setShowEditModal(false)}
           onSave={handleEditStock}
         />

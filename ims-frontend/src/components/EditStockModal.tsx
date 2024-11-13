@@ -3,12 +3,12 @@ import { Stock } from '../types';
 
 interface EditStockModalProps {
   stock: Stock;
+  itemName: string;
   onClose: () => void;
   onSave: (stock: Stock) => void;
 }
 
-const EditStockModal: React.FC<EditStockModalProps> = ({ stock, onClose, onSave }) => {
-  const [itemID, setItemID] = useState(stock.itemID);
+const EditStockModal: React.FC<EditStockModalProps> = ({ stock, itemName, onClose, onSave }) => {
   const [quantityInStock, setQuantityInStock] = useState(stock.quantityInStock);
   const [arrivalDate, setArrivalDate] = useState(stock.arrivalDate instanceof Date ? stock.arrivalDate.toISOString().substring(0, 10) : new Date(stock.arrivalDate).toISOString().substring(0, 10));
   const [expiryDate, setExpiryDate] = useState(stock.expiryDate ? (stock.expiryDate instanceof Date ? stock.expiryDate.toISOString().substring(0, 10) : new Date(stock.expiryDate).toISOString().substring(0, 10)) : '');
@@ -16,7 +16,6 @@ const EditStockModal: React.FC<EditStockModalProps> = ({ stock, onClose, onSave 
   const handleSave = () => {
     const updatedStock: Stock = {
       ...stock,
-      itemID,
       quantityInStock,
       arrivalDate: new Date(arrivalDate),
       expiryDate: expiryDate ? new Date(expiryDate) : undefined,
@@ -29,8 +28,8 @@ const EditStockModal: React.FC<EditStockModalProps> = ({ stock, onClose, onSave 
       <div className="modal-content">
         <h2>Edit Stock</h2>
         <label>
-          Item ID:
-          <input type="number" value={itemID} onChange={(e) => setItemID(Number(e.target.value))} />
+          Item Name:
+          <span>{itemName}</span>
         </label>
         <label>
           Quantity:
