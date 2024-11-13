@@ -34,19 +34,12 @@ const AddStockModal: React.FC<AddStockModalProps> = ({ onClose, onSave }) => {
 
   const handleSave = () => {
     if (itemID && quantityInStock && arrivalDate) {
-      const selectedItem = items.find(item => item.itemID === Number(itemID));
-      if (!selectedItem) {
-        console.error('Selected item not found');
-        return;
-      }
-
       const newStock: Stock = {
         stockID: 0, // This will be set by the backend
         itemID: Number(itemID),
         quantityInStock: Number(quantityInStock),
         arrivalDate: new Date(arrivalDate),
         expiryDate: expiryDate ? new Date(expiryDate) : undefined,
-        item: selectedItem, // Include the item property
       };
       onSave(newStock);
     } else {

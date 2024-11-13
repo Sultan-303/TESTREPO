@@ -1,5 +1,4 @@
-﻿// Stock.cs
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,7 +19,5 @@ namespace IMS.DTO
         public DateTime ArrivalDate { get; set; }
 
         public DateTime? ExpiryDate { get; set; }
-
-        public Item Item { get; set; } // Navigation property
     }
 }

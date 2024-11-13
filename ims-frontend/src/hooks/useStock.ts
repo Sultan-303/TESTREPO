@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Stock } from '../types';
+import { Stock, Item } from '../types';
 
 const useStock = () => {
   const [allStock, setAllStock] = useState<Stock[]>([]);
+  const [allItems, setAllItems] = useState<Item[]>([]);
   const [filteredStock, setFilteredStock] = useState<Stock[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -28,8 +29,25 @@ const useStock = () => {
     }
   };
 
+  const fetchItems = async () => {
+    try {
+      console.log('Fetching all items from API');
+      const response = await fetch('https://localhost:7237/api/items');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data: Item[] = await response.json();
+      console.log(`Fetched ${data.length} items from API`);
+      setAllItems(data);
+    } catch (error) {
+      setError('Error fetching items');
+      console.error('Error fetching items:', error);
+    }
+  };
+
   useEffect(() => {
     fetchStock();
+    fetchItems();
   }, []);
 
   const addStock = async (newStock: Stock) => {
@@ -41,10 +59,11 @@ const useStock = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...newStock,
+          stockID: 0,
+          itemID: newStock.itemID,
+          quantityInStock: newStock.quantityInStock,
           arrivalDate: newStock.arrivalDate.toISOString(),
           expiryDate: newStock.expiryDate ? newStock.expiryDate.toISOString() : null,
-          itemID: newStock.item.itemID, // Reference the existing Item by its ItemID
         }),
       });
 
@@ -72,10 +91,11 @@ const useStock = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...updatedStock,
+          stockID: updatedStock.stockID,
+          itemID: updatedStock.itemID,
+          quantityInStock: updatedStock.quantityInStock,
           arrivalDate: updatedStock.arrivalDate.toISOString(),
           expiryDate: updatedStock.expiryDate ? updatedStock.expiryDate.toISOString() : null,
-          itemID: updatedStock.item.itemID, // Reference the existing Item by its ItemID
         }),
       });
 
@@ -133,7 +153,7 @@ const useStock = () => {
     setFilteredStock(allStock.filter(criteria));
   };
 
-  return { allStock, filteredStock, addStock, updateStock, deleteStock, filterStock, fetchStock, loading, error, showErrorModal, setShowErrorModal };
+  return { allStock, allItems, filteredStock, addStock, updateStock, deleteStock, filterStock, fetchStock, loading, error, showErrorModal, setShowErrorModal };
 };
 
 export default useStock;

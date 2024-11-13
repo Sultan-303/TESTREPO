@@ -21,7 +21,7 @@ namespace IMS.DAL.Repositories
         public async Task<IEnumerable<Stock>> GetAllStockAsync()
         {
             _logger.LogInformation("Fetching all stock from database");
-            var stock = await _context.Stocks.Include(s => s.Item).ToListAsync();
+            var stock = await _context.Stocks.ToListAsync();
             _logger.LogInformation($"Fetched {stock.Count} stock items from database");
             return stock;
         }
@@ -29,7 +29,7 @@ namespace IMS.DAL.Repositories
         public async Task<Stock> GetStockByIdAsync(int id)
         {
             _logger.LogInformation($"Fetching stock with ID: {id} from database");
-            var stock = await _context.Stocks.Include(s => s.Item).FirstOrDefaultAsync(s => s.StockID == id);
+            var stock = await _context.Stocks.FirstOrDefaultAsync(s => s.StockID == id);
             if (stock == null)
             {
                 _logger.LogWarning($"Stock with ID {id} not found in database.");

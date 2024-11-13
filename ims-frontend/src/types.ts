@@ -13,5 +13,4 @@ export interface Stock {
   quantityInStock: number;
   arrivalDate: Date;
   expiryDate?: Date;
-  item: Item; // Add the item property
 }

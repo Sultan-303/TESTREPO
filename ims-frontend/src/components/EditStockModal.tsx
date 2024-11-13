@@ -1,6 +1,5 @@
-// src/components/EditStockModal.tsx
-import React, { useState, useEffect } from 'react';
-import { Stock, Item } from '../types';
+import React, { useState } from 'react';
+import { Stock } from '../types';
 
 interface EditStockModalProps {
   stock: Stock;
@@ -9,41 +8,20 @@ interface EditStockModalProps {
 }
 
 const EditStockModal: React.FC<EditStockModalProps> = ({ stock, onClose, onSave }) => {
-  const [items, setItems] = useState<Item[]>([]);
   const [itemID, setItemID] = useState(stock.itemID);
   const [quantityInStock, setQuantityInStock] = useState(stock.quantityInStock);
-  const [arrivalDate, setArrivalDate] = useState(stock.arrivalDate.toISOString().split('T')[0]);
-  const [expiryDate, setExpiryDate] = useState(stock.expiryDate ? stock.expiryDate.toISOString().split('T')[0] : '');
-
-  useEffect(() => {
-    // Fetch items from the backend
-    const fetchItems = async () => {
-      try {
-        const response = await fetch('https://localhost:7237/api/items');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data: Item[] = await response.json();
-        setItems(data);
-      } catch (error) {
-        console.error('Error fetching items:', error);
-      }
-    };
-
-    fetchItems();
-  }, []);
+  const [arrivalDate, setArrivalDate] = useState(stock.arrivalDate instanceof Date ? stock.arrivalDate.toISOString().substring(0, 10) : new Date(stock.arrivalDate).toISOString().substring(0, 10));
+  const [expiryDate, setExpiryDate] = useState(stock.expiryDate ? (stock.expiryDate instanceof Date ? stock.expiryDate.toISOString().substring(0, 10) : new Date(stock.expiryDate).toISOString().substring(0, 10)) : '');
 
   const handleSave = () => {
-    if (itemID && quantityInStock && arrivalDate) {
-      const updatedStock: Stock = {
-        ...stock,
-        itemID,
-        quantityInStock,
-        arrivalDate: new Date(arrivalDate),
-        expiryDate: expiryDate ? new Date(expiryDate) : undefined,
-      };
-      onSave(updatedStock);
-    }
+    const updatedStock: Stock = {
+      ...stock,
+      itemID,
+      quantityInStock,
+      arrivalDate: new Date(arrivalDate),
+      expiryDate: expiryDate ? new Date(expiryDate) : undefined,
+    };
+    onSave(updatedStock);
   };
 
   return (
@@ -51,15 +29,8 @@ const EditStockModal: React.FC<EditStockModalProps> = ({ stock, onClose, onSave 
       <div className="modal-content">
         <h2>Edit Stock</h2>
         <label>
-          Item:
-          <select value={itemID} onChange={(e) => setItemID(Number(e.target.value))}>
-            <option value="">Select an item</option>
-            {items.map((item) => (
-              <option key={item.itemID} value={item.itemID}>
-                {item.itemName}
-              </option>
-            ))}
-          </select>
+          Item ID:
+          <input type="number" value={itemID} onChange={(e) => setItemID(Number(e.target.value))} />
         </label>
         <label>
           Quantity:

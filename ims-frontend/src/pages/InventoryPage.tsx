@@ -7,7 +7,7 @@ import EditStockModal from '../components/EditStockModal';
 import ErrorModal from '../components/ErrorModal';
 
 const InventoryPage: React.FC = () => {
-  const { allStock, addStock, updateStock, deleteStock, fetchStock, loading, error, showErrorModal, setShowErrorModal } = useStock();
+  const { allStock, allItems, addStock, updateStock, deleteStock, fetchStock, loading, error, showErrorModal, setShowErrorModal } = useStock();
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [currentStock, setCurrentStock] = useState<Stock | null>(null);
@@ -30,6 +30,11 @@ const InventoryPage: React.FC = () => {
     deleteStock(stockId);
   };
 
+  const getItemName = (itemID: number) => {
+    const item = allItems.find((item) => item.itemID === itemID);
+    return item ? item.itemName : 'Unknown Item';
+  };
+
   return (
     <div className="inventory-page">
       <h1>Inventory</h1>
@@ -41,7 +46,7 @@ const InventoryPage: React.FC = () => {
       ) : (
         <>
           <div className="stock-header">
-            <span className="item-header">Item</span>
+            <span className="item-header">Item Name</span>
             <span className="quantity-header">Quantity</span>
             <span className="arrival-header">Arrival Date</span>
             <span className="expiry-header">Expiry Date</span>
@@ -49,7 +54,7 @@ const InventoryPage: React.FC = () => {
           <ul className="stock-list">
             {allStock.map((stock) => (
               <li key={stock.stockID} className="stock-box">
-                <span>{stock.itemID}</span>
+                <span>{getItemName(stock.itemID)}</span>
                 <span>{stock.quantityInStock}</span>
                 <span>{new Date(stock.arrivalDate).toLocaleDateString()}</span>
                 <span>{stock.expiryDate ? new Date(stock.expiryDate).toLocaleDateString() : 'N/A'}</span>

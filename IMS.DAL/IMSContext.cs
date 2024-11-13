@@ -30,7 +30,7 @@ namespace IMS.DAL
 
             // Configure the relationship between Stock and Item
             modelBuilder.Entity<Stock>()
-                .HasOne(s => s.Item)
+                .HasOne<Item>()
                 .WithMany()
                 .HasForeignKey(s => s.ItemID)
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes
