@@ -27,7 +27,7 @@ describe('ItemsPage', () => {
         <ItemsPage />
       </Router>
     );
-    const heading = screen.getByRole('heading', { name: /test/i });
+    const heading = screen.getByRole('heading', { name: /items/i });
     expect(heading).toBeInTheDocument();
   });
 });
