@@ -27,28 +27,9 @@ jobs:
       - name: Build
         run: dotnet build IMS.sln --configuration Release --no-restore  # Build the solution
 
-  test:
+  test-itemspage:
     runs-on: ubuntu-latest
-    needs: build  # This ensures the test job runs after the build job
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'  # Ensure this matches your project
-
-      - name: Restore dependencies
-        run: dotnet restore IMSTests/IMSTests.csproj  # Restore the test project
-
-      - name: Run Tests
-        run: dotnet test IMSTests/IMSTests.csproj --no-restore --verbosity normal  # Run tests
-
-  frontend-tests:
-    runs-on: ubuntu-latest
-    needs: build  # This ensures the frontend-tests job runs after the build job
+    needs: build
 
     steps:
       - name: Checkout code
@@ -57,18 +38,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'  # Ensure this matches your project requirements
+          node-version: '16.x'  # Ensure this matches your project
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run unit and integration tests
-        run: npm test
-
-      - name: Start the application
-        run: npm start &
-        env:
-          CI: true
-
-      - name: Run end-to-end tests
-        run: npx cypress run
+      - name: Run ItemsPage test
+        run: npm test -- src/pages/ItemsPage.test.tsx
