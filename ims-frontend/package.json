@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@testing-library/user-event": "^13.5.0",
     "@types/node": "^16.18.113",
     "@types/react": "^18.3.11",
@@ -13,16 +14,14 @@
     "react-router-dom": "^6.27.0",
     "react-scripts": "^5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4",
-    "@fortawesome/fontawesome-free": "^5.15.4" 
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "react-scripts start",
-    "cypress:open": "cypress open"
+    "dev": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
@@ -43,14 +42,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
-    "@testing-library/dom": "^8.19.0",
     "@types/jest": "^29.5.14",
-    "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
-    "jest": "^26.6.3",
     "cypress": "^7.2.0",
     "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
     "ts-jest": "^26.5.6"
   }
 }
