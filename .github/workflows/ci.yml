@@ -42,6 +42,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ims-frontend
 
       - name: Run ItemsPage test
         run: npm test -- src/pages/ItemsPage.test.tsx
+        working-directory: ims-frontend
