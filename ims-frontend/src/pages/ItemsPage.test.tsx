@@ -30,4 +30,14 @@ describe('ItemsPage', () => {
     const heading = screen.getByRole('heading', { name: /items/i });
     expect(heading).toBeInTheDocument();
   });
+
+  test('displays "No items have been created yet" when there are no items', () => {
+    render(
+      <Router>
+        <ItemsPage />
+      </Router>
+    );
+    const noItemsText = screen.getByText(/no items have been created yet./i);
+    expect(noItemsText).toBeInTheDocument();
+  });
 });
