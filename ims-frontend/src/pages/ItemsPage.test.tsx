@@ -37,7 +37,17 @@ describe('ItemsPage', () => {
         <ItemsPage />
       </Router>
     );
-    const noItemsText = screen.getByText(/no items have been created yet./i);
+    const noItemsText = screen.getByText(/no items have been created yet/i);
     expect(noItemsText).toBeInTheDocument();
+  });
+
+  test('displays "Add Item" button', () => {
+    render(
+      <Router>
+        <ItemsPage />
+      </Router>
+    );
+    const addButton = screen.getByRole('button', { name: /add item/i });
+    expect(addButton).toBeInTheDocument();
   });
 });
