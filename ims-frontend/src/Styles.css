@@ -116,7 +116,7 @@ body {
 }
 
 .items-header, .stock-header {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 10px;
   background-color: var(--product-card-background-color);
@@ -125,23 +125,37 @@ body {
   margin-bottom: 0px;
 }
 
-.items-header .name-header, .stock-header .item-header {
-  padding-left: 94px; 
+.items-header .name-header {
+  padding-left: 70px; 
   text-align: left;
 }
 
-.items-header .unit-header, .stock-header .quantity-header {
-  padding-left: 68px;
+.stock-header .item-header {
+  padding-left: 50px;
+}
+
+.items-header .unit-header {
+  padding-left: 145px;
   text-align: left;
 }
 
-.items-header .price-header, .stock-header .arrival-header {
-  padding-left: 35px;
+.stock-header .quantity-header {
+  padding-left: 100px;
   text-align: left;
+}
+
+.items-header .price-header {
+  padding-left: 150px;
+  text-align: left;
+}
+
+.stock-header .arrival-header {
+  padding-left: 100px;
+  text-align: center;
 }
 
 .stock-header .expiry-header {
-  padding-left: 35px;
+  padding-left: 87px;
   text-align: left;
 }
 
