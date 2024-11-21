@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ItemsPage from './ItemsPage';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Item } from '../types';
 
 // Mock the useItems hook
 jest.mock('../hooks/useItems', () => ({
@@ -49,5 +50,34 @@ describe('ItemsPage', () => {
     );
     const addButton = screen.getByRole('button', { name: /add item/i });
     expect(addButton).toBeInTheDocument();
+  });
+
+  test('displays "Items" header when there are items present', () => {
+    // Mock the useItems hook to return items
+    jest.mock('../hooks/useItems', () => ({
+      __esModule: true,
+      default: () => ({
+        allItems: [
+          { itemID: 1, itemName: 'Item 1', unit: 'kg', price: 10 },
+          { itemID: 2, itemName: 'Item 2', unit: 'kg', price: 20 },
+        ],
+        addItem: jest.fn(),
+        updateItem: jest.fn(),
+        deleteItem: jest.fn(),
+        fetchItems: jest.fn(),
+        loading: false,
+        error: null,
+        showErrorModal: false,
+        setShowErrorModal: jest.fn(),
+      }),
+    }));
+
+    render(
+      <Router>
+        <ItemsPage />
+      </Router>
+    );
+    const heading = screen.getByRole('heading', { name: /items/i });
+    expect(heading).toBeInTheDocument();
   });
 });
