@@ -22,23 +22,6 @@ namespace IMS.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("IMS.DTO.Category", b =>
-                {
-                    b.Property<int>("CategoryID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"));
-
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CategoryID");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("IMS.DTO.Item", b =>
                 {
                     b.Property<int>("ItemID")
@@ -61,21 +44,6 @@ namespace IMS.DAL.Migrations
                     b.HasKey("ItemID");
 
                     b.ToTable("Items");
-                });
-
-            modelBuilder.Entity("IMS.DTO.ItemCategory", b =>
-                {
-                    b.Property<int>("ItemID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ItemID", "CategoryID");
-
-                    b.HasIndex("CategoryID");
-
-                    b.ToTable("ItemCategories");
                 });
 
             modelBuilder.Entity("IMS.DTO.Stock", b =>
@@ -105,42 +73,15 @@ namespace IMS.DAL.Migrations
                     b.ToTable("Stocks");
                 });
 
-            modelBuilder.Entity("IMS.DTO.ItemCategory", b =>
-                {
-                    b.HasOne("IMS.DTO.Category", "Category")
-                        .WithMany("ItemCategories")
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("IMS.DTO.Item", "Item")
-                        .WithMany("ItemCategories")
-                        .HasForeignKey("ItemID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Item");
-                });
-
             modelBuilder.Entity("IMS.DTO.Stock", b =>
                 {
-                    b.HasOne("IMS.DTO.Item", null)
+                    b.HasOne("IMS.DTO.Item", "Item")
                         .WithMany()
                         .HasForeignKey("ItemID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
 
-            modelBuilder.Entity("IMS.DTO.Category", b =>
-                {
-                    b.Navigation("ItemCategories");
-                });
-
-            modelBuilder.Entity("IMS.DTO.Item", b =>
-                {
-                    b.Navigation("ItemCategories");
+                    b.Navigation("Item");
                 });
 #pragma warning restore 612, 618
         }

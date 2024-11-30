@@ -9,8 +9,6 @@ namespace IMS.DAL
 
         public DbSet<Item> Items { get; set; }
         public DbSet<Stock> Stocks { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<ItemCategory> ItemCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,20 +34,6 @@ namespace IMS.DAL
                 .WithMany()
                 .HasForeignKey(s => s.ItemID)
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes
-
-            // Configure the many-to-many relationship between Item and Category
-            modelBuilder.Entity<ItemCategory>()
-                .HasKey(ic => new { ic.ItemID, ic.CategoryID });
-
-            modelBuilder.Entity<ItemCategory>()
-                .HasOne(ic => ic.Item)
-                .WithMany(i => i.ItemCategories)
-                .HasForeignKey(ic => ic.ItemID);
-
-            modelBuilder.Entity<ItemCategory>()
-                .HasOne(ic => ic.Category)
-                .WithMany(c => c.ItemCategories)
-                .HasForeignKey(ic => ic.CategoryID);
         }
     }
 }
