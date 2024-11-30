@@ -7,5 +7,7 @@ namespace IMS.DTO
         public string ItemName { get; set; }
         public string Unit { get; set; }
         public decimal Price { get; set; }
+
+        public ICollection<ItemCategory> ItemCategories { get; set; }
     }
 }

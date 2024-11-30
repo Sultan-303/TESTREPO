@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241128165856_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMS.DAL\\Migrations\\20241128165856_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C4DB96C-BDB0-469F-A868-811DCF2BEF66}|IMS.API\\IMS.API.csproj|solutionrelative:ims.api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|c:\\users\\habib\\documents\\github\\testrepo\\ims.dal\\imscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29BA1C66-48B7-4674-B535-51662C632A50}|IMS.DAL\\IMS.DAL.csproj|solutionrelative:ims.dal\\imscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241128162425_AddedCategoryAndItemCategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMS.DAL\\Migrations\\20241128162425_AddedCategoryAndItemCategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,39 +31,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StockRepository.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\StockRepository.cs",
-              "RelativeDocumentMoniker": "IMS.DAL\\Repositories\\StockRepository.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Repositories\\StockRepository.cs",
-              "RelativeToolTip": "IMS.DAL\\Repositories\\StockRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAcwCsAAAA0AAAAAAAAAA==",
+              "Title": "20241128165856_test.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241128165856_test.cs",
+              "RelativeDocumentMoniker": "IMS.DAL\\Migrations\\20241128165856_test.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241128165856_test.cs",
+              "RelativeToolTip": "IMS.DAL\\Migrations\\20241128165856_test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T10:59:25.985Z",
+              "WhenOpened": "2024-11-28T16:58:56.869Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StockController.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\StockController.cs",
-              "RelativeDocumentMoniker": "IMS.API\\Controllers\\StockController.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\Controllers\\StockController.cs",
-              "RelativeToolTip": "IMS.API\\Controllers\\StockController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAqwFIAAAAkAAAAAAAAAA==",
+              "Title": "20241128162425_AddedCategoryAndItemCategories.cs",
+              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241128162425_AddedCategoryAndItemCategories.cs",
+              "RelativeDocumentMoniker": "IMS.DAL\\Migrations\\20241128162425_AddedCategoryAndItemCategories.cs",
+              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\Migrations\\20241128162425_AddedCategoryAndItemCategories.cs",
+              "RelativeToolTip": "IMS.DAL\\Migrations\\20241128162425_AddedCategoryAndItemCategories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T10:49:50.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IMSContext.cs",
-              "DocumentMoniker": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMSContext.cs",
-              "RelativeDocumentMoniker": "IMS.DAL\\IMSContext.cs",
-              "ToolTip": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMSContext.cs",
-              "RelativeToolTip": "IMS.DAL\\IMSContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwCMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T10:45:47.51Z"
+              "WhenOpened": "2024-11-28T16:24:25.64Z",
+              "EditorCaption": ""
             }
           ]
         }

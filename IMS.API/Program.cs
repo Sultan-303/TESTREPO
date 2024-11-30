@@ -33,6 +33,11 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "IMS API", Version = "v1" });
 });
 
+// Register the CategoryService and ICategoriesService
+builder.Services.AddScoped<ICategoriesService, CategoriesService>(); // BLL
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>(); // DAL
+
+// Register the ItemService and IItemService
 builder.Services.AddScoped<IItemService, ItemService>(); // BLL
 builder.Services.AddScoped<IItemRepository, ItemRepository>(); // DAL
 
