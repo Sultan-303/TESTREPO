@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\IMSTests.csproj": {}
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMSTests\\IMSTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\IMS.API.csproj": {
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.API\\IMS.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\IMS.API.csproj",
+        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.API\\IMS.API.csproj",
         "projectName": "IMS.API",
-        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\IMS.API.csproj",
+        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.API\\IMS.API.csproj",
         "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\obj\\",
+        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,17 +29,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj"
               }
             }
           }
@@ -105,14 +105,14 @@
         }
       }
     },
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj": {
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj",
         "projectName": "IMS.BLL",
-        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj",
+        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj",
         "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\obj\\",
+        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -130,14 +130,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj"
               }
             }
           }
@@ -176,14 +176,14 @@
         }
       }
     },
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj": {
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj",
         "projectName": "IMS.DAL",
-        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj",
+        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj",
         "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\obj\\",
+        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -201,11 +201,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj"
               }
             }
           }
@@ -260,14 +260,14 @@
         }
       }
     },
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj": {
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj",
         "projectName": "IMS.DTO",
-        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj",
+        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj",
         "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\obj\\",
+        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -321,14 +321,14 @@
         }
       }
     },
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj": {
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj",
         "projectName": "IMS.Interfaces",
-        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj",
+        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj",
         "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -346,8 +346,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj"
               }
             }
           }
@@ -386,14 +386,14 @@
         }
       }
     },
-    "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\IMSTests.csproj": {
+    "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMSTests\\IMSTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\IMSTests.csproj",
+        "projectUniqueName": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMSTests\\IMSTests.csproj",
         "projectName": "IMSTests",
-        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\IMSTests.csproj",
+        "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMSTests\\IMSTests.csproj",
         "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMSTests\\obj\\",
+        "outputPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMSTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -411,20 +411,20 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\IMS.API.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.API\\IMS.API.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.API\\IMS.API.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.API\\IMS.API.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.BLL\\IMS.BLL.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.BLL\\IMS.BLL.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DAL\\IMS.DAL.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DAL\\IMS.DAL.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.DTO\\IMS.DTO.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.DTO\\IMS.DTO.csproj"
               },
-              "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\TESTREPO\\IMS.Interfaces\\IMS.Interfaces.csproj"
+              "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\habib\\Documents\\GitHub\\IMS\\IMS.Interfaces\\IMS.Interfaces.csproj"
               }
             }
           }

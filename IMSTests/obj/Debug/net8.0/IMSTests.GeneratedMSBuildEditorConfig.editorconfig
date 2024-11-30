@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = IMSTests
-build_property.ProjectDir = C:\Users\habib\Documents\GitHub\TESTREPO\IMSTests\
+build_property.ProjectDir = C:\Users\habib\Documents\GitHub\IMS\IMSTests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
