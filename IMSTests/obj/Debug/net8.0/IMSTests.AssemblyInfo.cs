@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IMSTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b917de27dd02c81a774db0205372d75262cdeaf")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb4eb0f35d865d0f3917973c6c660a11038b67bf")]
+>>>>>>> parent of 2ffe8c9 (Get all categories working)
 [assembly: System.Reflection.AssemblyProductAttribute("IMSTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IMSTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
